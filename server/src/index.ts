@@ -11,10 +11,11 @@ import cookieParser from "cookie-parser"
 dotenv.config()
 const port = process.env.PORT || 5000
 const cookieSecret = process.env.COOKIE_SECRET as string
+const fronendUrl = process.env.FRONTEND_URL as string
 const app = express()
 
 const corsOptions = {
-  origin: ["http://localhost:5173","http://localhost:4173", ],
+  origin: ["http://localhost:5173", "http://localhost:4173", fronendUrl],
   allowedHeaders: [
     "Content-Type",
     "Authorization",
