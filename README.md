@@ -32,54 +32,71 @@
 
 
 
-## Run Locally
+## 🛠️ Run Locally
 
-Clone the project
+Follow these steps to run the project locally:
 
-```bash
-  git clone https://github.com/karanShaw000/syntax-stories.git
-```
-
-Go to the server directory
+### 1. Clone the Repository
 
 ```bash
-  cd syntax-stories/server
+git clone https://github.com/karanShaw000/syntax-stories.git
 ```
 
-Install dependencies
+---
+
+### 2. Setup the Backend
 
 ```bash
-  npm install
+cd syntax-stories/server
 ```
 
-Make a .env file and paste the content of .env.sample to .env
+Install dependencies:
 
 ```bash
-  touch .env && cp .env.sample .env
+npm install
 ```
 
-Give a mongodb url, jwt_secret, cookie_secret and port. I used port 5000. I you change 5000 to some other port then you have to change the port in client/src/libs/network.ts for development.
-
-Start the backend server in port 5000(if not changed)
+Create a `.env` file from the sample:
 
 ```bash
-  npm run dev
+cp .env.sample .env
 ```
 
-Go to the client directory
+Edit `.env.local` and provide the following values:
+
+- `MONGODB_URL` – Your MongoDB connection string
+- `JWT_SECRET` – A secret key for JWT
+- `COOKIE_SECRET` – A secret key for cookies
+- `PORT` – (Optional) Default is `5000`
+
+> ⚠️ If you change the backend port from `5000`, make sure to update the port in `client/src/libs/network.ts` for development.
+
+Start the backend server:
 
 ```bash
-  cd syntax-stories/client
+npm run dev
 ```
 
-Install dependencies
+---
+
+### 3. Setup the Frontend
 
 ```bash
-  npm install
+cd ../client
 ```
 
-Start the client usually in port 5173
+Install dependencies:
 
 ```bash
-  npm run dev
+npm install
 ```
+
+Start the React app (usually runs on `http://localhost:5173`):
+
+```bash
+npm run dev
+```
+
+---
+
+You're now all set to use **Syntax-Stories** locally!
