@@ -1,8 +1,8 @@
 const getBaseUrl = (): string => {
-  //dev
-  // return 'http://localhost:5000/api';
+  if (import.meta.env.DEV) {
+    return 'http://localhost:5000/api';
+  }
 
-  //prod 
   return "https://syntaxstories.azurewebsites.net/api"
 }
 
