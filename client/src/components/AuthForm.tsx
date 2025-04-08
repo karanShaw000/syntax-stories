@@ -86,8 +86,8 @@ export function AuthForm() {
                 {error && <Label className="text-destructive">Password Required</Label>}
               </div>
               <Button type="submit" className="w-full">
-                {location.pathname === "/login" && "Login"}
-                {location.pathname === "/register" && "Register"}
+                {location.pathname === "/login" && (loginMutation.isPending ?"Logining..." :  "Login")}
+                {location.pathname === "/register" && (registerMutation.isPending ?"Registering..." :  "Register")}
               </Button>
 
             </div>
