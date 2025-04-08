@@ -55,7 +55,7 @@ Install dependencies
 Make a .env file and paste the content of .env.sample to .env
 
 ```bash
-  touch .env.local && cp .env.sample .env.local
+  touch .env && cp .env.sample .env
 ```
 
 Give a mongodb url, jwt_secret, cookie_secret and port. I used port 5000. I you change 5000 to some other port then you have to change the port in client/src/libs/network.ts for development.
